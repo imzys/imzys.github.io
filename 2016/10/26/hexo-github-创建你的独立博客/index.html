@@ -23,7 +23,7 @@
 <meta property="og:description" content="如果你厌倦了在各大平台去开博，又或者想在广袤的网络空间有自己的一个小小驿站，那么一起来吧，用Hexo和GitHub去做出一个属于自己的独立博客吧！">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/gitver.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/nodejs1.PNG">
-<meta property="og:updated_time" content="2016-10-30T11:06:04.032Z">
+<meta property="og:updated_time" content="2016-10-30T11:32:40.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github 创建你的独立博客（1）">
 <meta name="twitter:description" content="如果你厌倦了在各大平台去开博，又或者想在广袤的网络空间有自己的一个小小驿站，那么一起来吧，用Hexo和GitHub去做出一个属于自己的独立博客吧！">
@@ -318,6 +318,10 @@
 <p>如果显示如下图相似的 git版本信息，那么恭喜你，安装成功了，否则请在 windows的环境变量[path]中配置相应的git路径。<br><img src="http://ofufh48at.bkt.clouddn.com/gitver.PNG" alt=""></p>
 <h3 id="二-安装Nodejs"><a href="#二-安装Nodejs" class="headerlink" title="二.安装Nodejs"></a>二.安装Nodejs</h3><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Nodejs</a>  是一个开放源代码、跨平台的运行环境，它使得原来被诟病JavaScript，一下子大发光彩！可以到<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">官网</a> 下载最新版本。不过对于win10平台，这里有一个坑，某些版的<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Nodejs</a>安装后无法使用 npm,保险起见，可以下载官网的推荐版本。<br><img src="http://ofufh48at.bkt.clouddn.com/nodejs1.PNG" alt=""></p>
 <h3 id="三-安装Hexo"><a href="#三-安装Hexo" class="headerlink" title="三.安装Hexo"></a>三.安装Hexo</h3><p>做了足够的前戏，主角终于上场了，按照官方<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>,只需要一条npm指令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<p>但是~但是~理想很丰满，现实却很骨感，由于伟大<a href="https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank" rel="external">防火长城</a>的存在，国内的线路几乎无从npm官方源下载，这又是一个坑！好在国内还是有不少的npm镜像，下面我们使用淘宝的npm源，进行hexo的安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>等命令完成后就可以使用cnpm进行hexo的安装了,以下的命令在E:\hexo 下创建目录并安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ cd e:</div><div class="line">$ mkdir hexo</div><div class="line">$ cd hexo</div><div class="line">$ cnpm install hexo-cli -g</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -329,7 +333,7 @@
         <p><span>本文标题:</span><a href="/2016/10/26/hexo-github-创建你的独立博客/">hexo + github 创建你的独立博客（1）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">zys</a></p>
         <p><span>发布时间:</span>2016-10-26, 13:10:03</p>
-        <p><span>最后更新:</span>2016-10-30, 19:06:04</p>
+        <p><span>最后更新:</span>2016-10-30, 19:32:40</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/10/26/hexo-github-创建你的独立博客/" title="hexo + github 创建你的独立博客（1）">http://imzys.github.io/2016/10/26/hexo-github-创建你的独立博客/</a>
             <span class="copy-path" data-clipboard-text="原文: http://imzys.github.io/2016/10/26/hexo-github-创建你的独立博客/　　作者: zys" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
