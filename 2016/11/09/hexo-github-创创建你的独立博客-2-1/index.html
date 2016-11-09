@@ -15,14 +15,23 @@
 
 
 
+<meta name="description" content="如何把Hexo托管在Github上并指向独立域名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo + github 创建你的独立博客（3）">
-<meta property="og:url" content="http://imzys.github.io/2016/11/10/hexo-github-创创建你的独立博客-2-1/index.html">
+<meta property="og:url" content="http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/index.html">
 <meta property="og:site_name" content="郑裕升的技术博客">
+<meta property="og:description" content="如何把Hexo托管在Github上并指向独立域名">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/sub2.PNG">
-<meta property="og:updated_time" content="2016-11-09T06:50:51.000Z">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github2.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github3.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github4.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github5.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github6.PNG">
+<meta property="og:updated_time" content="2016-11-09T11:31:30.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github 创建你的独立博客（3）">
+<meta name="twitter:description" content="如何把Hexo托管在Github上并指向独立域名">
 <meta name="twitter:image" content="http://ofufh48at.bkt.clouddn.com/sub2.PNG">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -268,8 +277,8 @@
       <div class="body-wrap"><article id="post-hexo-github-创创建你的独立博客-2-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/11/10/hexo-github-创创建你的独立博客-2-1/" class="article-date">
-      <time datetime="2016-11-10T08:15:18.000Z" itemprop="datePublished">2016-11-10</time>
+      <a href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/" class="article-date">
+      <time datetime="2016-11-09T10:15:18.000Z" itemprop="datePublished">2016-11-09</time>
 </a>
 
 
@@ -305,9 +314,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="http://ofufh48at.bkt.clouddn.com/sub2.PNG" alt=""><br><a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="http://ofufh48at.bkt.clouddn.com/sub2.PNG" alt=""></excerpt></p>
+<h2 id="如何把Hexo托管在Github上并指向独立域名"><a href="#如何把Hexo托管在Github上并指向独立域名" class="headerlink" title="如何把Hexo托管在Github上并指向独立域名"></a>如何把<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>托管在<a href="https://github.com/" target="_blank" rel="external">Github</a>上并指向独立域名</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
-</the>
+
+<h3 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h3><p>Github作为地球最大的开源项目托管平台,上面聚集了最优秀的一批开发者,跟牛人一起混总不会有错~~<br>注册Github非常简单，只需要简单的几步，填上你的用户名、Email地址、密码，点击 Create an account就可以了。<br><img src="http://ofufh48at.bkt.clouddn.com/github.PNG" alt=""></p>
+<h3 id="创建代码仓库"><a href="#创建代码仓库" class="headerlink" title="创建代码仓库"></a>创建代码仓库</h3><p>需要注意的是这里的仓库名称必须是你的Github 账号名，只有这样Github才会把它解释为 Github page,最后你会得到一个类似 <a href="https://imzys.github.io">https://imzys.github.io</a> 这样的域名。<br><img src="http://ofufh48at.bkt.clouddn.com/github2.PNG" alt=""></p>
+<h3 id="修改Hexo配置"><a href="#修改Hexo配置" class="headerlink" title="修改Hexo配置"></a>修改<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>配置</h3><p>再次打开<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>安装目录下的_config.yml，找到 deploy 字段相应的设置,具体可以参照以下的例子。其中repository：应该设置成你自己的 git,最后保存文件。<br><img src="http://ofufh48at.bkt.clouddn.com/github3.PNG" alt=""></p>
+<h3 id="设置SSH-keys"><a href="#设置SSH-keys" class="headerlink" title="设置SSH keys"></a>设置SSH keys</h3><h4 id="生成SSH-keys"><a href="#生成SSH-keys" class="headerlink" title="生成SSH keys"></a>生成SSH keys</h4><p>在git bash 中输入以下命令,检查是否已经存在了SSH keys,有的话则删除该文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls -al ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>接入输入,其中引号内容为你注册Github的邮箱地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;ztzhysh@gmail.com&quot;</div></pre></td></tr></table></figure></p>
+<p>会出现类似下图的内容<br><img src="http://ofufh48at.bkt.clouddn.com/github4.PNG" alt=""><br>继续输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh-agent -s</div><div class="line">$ ssh-add ~/.ssh/id_rsa</div></pre></td></tr></table></figure></p>
+<p>如果出错的话就输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ eval `ssh-agent -s`</div><div class="line">$ ssh-add</div></pre></td></tr></table></figure></p>
+<h4 id="Github中设置SSH-keys"><a href="#Github中设置SSH-keys" class="headerlink" title="Github中设置SSH keys"></a>Github中设置SSH keys</h4><p>好了，现在可以打开你的.ssh/id_rsa.pub文件，把里面的内容copy,再回到github中，并粘贴。<br><img src="http://ofufh48at.bkt.clouddn.com/github5.PNG" alt=""><br><img src="http://ofufh48at.bkt.clouddn.com/github6.PNG" alt=""><br>最后测试一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>你可能会看到有警告,输入“yes”就好!</p>
+<h3 id="部署你的网站"><a href="#部署你的网站" class="headerlink" title="部署你的网站"></a>部署你的网站</h3></the>
       
     </div>
     
@@ -315,13 +335,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/11/10/hexo-github-创创建你的独立博客-2-1/">hexo + github 创建你的独立博客（3）</a></p>
+        <p><span>本文标题:</span><a href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/">hexo + github 创建你的独立博客（3）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">zys</a></p>
-        <p><span>发布时间:</span>2016-11-10, 16:15:18</p>
-        <p><span>最后更新:</span>2016-11-09, 14:50:51</p>
+        <p><span>发布时间:</span>2016-11-09, 18:15:18</p>
+        <p><span>最后更新:</span>2016-11-09, 19:31:30</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/11/10/hexo-github-创创建你的独立博客-2-1/" title="hexo + github 创建你的独立博客（3）">http://imzys.github.io/2016/11/10/hexo-github-创创建你的独立博客-2-1/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://imzys.github.io/2016/11/10/hexo-github-创创建你的独立博客-2-1/　　作者: zys" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/" title="hexo + github 创建你的独立博客（3）">http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/　　作者: zys" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -348,7 +368,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何把Hexo托管在Github上并指向独立域名"><span class="toc-number">1.</span> <span class="toc-text">如何把Hexo托管在Github上并指向独立域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册Github账号"><span class="toc-number">1.1.</span> <span class="toc-text">注册Github账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建代码仓库"><span class="toc-number">1.2.</span> <span class="toc-text">创建代码仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改Hexo配置"><span class="toc-number">1.3.</span> <span class="toc-text">修改Hexo配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置SSH-keys"><span class="toc-number">1.4.</span> <span class="toc-text">设置SSH keys</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成SSH-keys"><span class="toc-number">1.4.1.</span> <span class="toc-text">生成SSH keys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github中设置SSH-keys"><span class="toc-number">1.4.2.</span> <span class="toc-text">Github中设置SSH keys</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署你的网站"><span class="toc-number">1.5.</span> <span class="toc-text">部署你的网站</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -400,7 +420,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/11/10/hexo-github-创创建你的独立博客-2-1/" data-title="hexo + github 创建你的独立博客（3）" data-url="http://imzys.github.io/2016/11/10/hexo-github-创创建你的独立博客-2-1/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/11/09/hexo-github-创创建你的独立博客-2-1/" data-title="hexo + github 创建你的独立博客（3）" data-url="http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/"></div>
     <script>
         var duoshuoQuery = {short_name:"zysblog"};
         var loadComment = function(){
@@ -435,7 +455,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/10/hexo-github-创创建你的独立博客-2-1/">hexo + github 创建你的独立博客（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/09/hexo-github-创建你的独立博客-2/">hexo + github 创建你的独立博客（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/26/hexo-github-创建你的独立博客/">hexo + github 创建你的独立博客（1）</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/">hexo + github 创建你的独立博客（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/09/hexo-github-创建你的独立博客-2/">hexo + github 创建你的独立博客（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/26/hexo-github-创建你的独立博客/">hexo + github 创建你的独立博客（1）</a></li></ul>
 
 
 
