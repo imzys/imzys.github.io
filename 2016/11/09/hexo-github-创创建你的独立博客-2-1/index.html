@@ -15,24 +15,28 @@
 
 
 
-<meta name="description" content="如何把Hexo托管在Github上并指向独立域名">
+<meta name="description" content="能够在本地生成博客后，下一个问题就是如何把博客页面托管在远程服务器上，而Githubpage 就是一个好选择，本节我将详细讲解如何在Github上部署网页。
+如何把Hexo托管在Github上并指向独立域名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo + github 创建你的独立博客（3）">
 <meta property="og:url" content="http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/index.html">
 <meta property="og:site_name" content="郑裕升的技术博客">
-<meta property="og:description" content="如何把Hexo托管在Github上并指向独立域名">
-<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/sub2.PNG">
+<meta property="og:description" content="能够在本地生成博客后，下一个问题就是如何把博客页面托管在远程服务器上，而Githubpage 就是一个好选择，本节我将详细讲解如何在Github上部署网页。
+如何把Hexo托管在Github上并指向独立域名">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github2.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github3.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github4.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github5.PNG">
 <meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/github6.PNG">
-<meta property="og:updated_time" content="2016-11-09T11:31:30.508Z">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/bala.PNG">
+<meta property="og:image" content="http://ofufh48at.bkt.clouddn.com/gitpage.PNG">
+<meta property="og:updated_time" content="2016-11-09T11:47:27.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github 创建你的独立博客（3）">
-<meta name="twitter:description" content="如何把Hexo托管在Github上并指向独立域名">
-<meta name="twitter:image" content="http://ofufh48at.bkt.clouddn.com/sub2.PNG">
+<meta name="twitter:description" content="能够在本地生成博客后，下一个问题就是如何把博客页面托管在远程服务器上，而Githubpage 就是一个好选择，本节我将详细讲解如何在Github上部署网页。
+如何把Hexo托管在Github上并指向独立域名">
+<meta name="twitter:image" content="http://ofufh48at.bkt.clouddn.com/github.PNG">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -314,7 +318,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><img src="http://ofufh48at.bkt.clouddn.com/sub2.PNG" alt=""></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>能够在本地生成博客后，下一个问题就是如何把博客页面托管在远程服务器上，而<a href="https://github.com/" target="_blank" rel="external">Github</a>page 就是一个好选择，本节我将详细讲解如何在Github上部署网页。</excerpt></p>
 <h2 id="如何把Hexo托管在Github上并指向独立域名"><a href="#如何把Hexo托管在Github上并指向独立域名" class="headerlink" title="如何把Hexo托管在Github上并指向独立域名"></a>如何把<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>托管在<a href="https://github.com/" target="_blank" rel="external">Github</a>上并指向独立域名</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
 
@@ -327,7 +331,9 @@
 <p>如果出错的话就输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ eval `ssh-agent -s`</div><div class="line">$ ssh-add</div></pre></td></tr></table></figure></p>
 <h4 id="Github中设置SSH-keys"><a href="#Github中设置SSH-keys" class="headerlink" title="Github中设置SSH keys"></a>Github中设置SSH keys</h4><p>好了，现在可以打开你的.ssh/id_rsa.pub文件，把里面的内容copy,再回到github中，并粘贴。<br><img src="http://ofufh48at.bkt.clouddn.com/github5.PNG" alt=""><br><img src="http://ofufh48at.bkt.clouddn.com/github6.PNG" alt=""><br>最后测试一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
 <p>你可能会看到有警告,输入“yes”就好!</p>
-<h3 id="部署你的网站"><a href="#部署你的网站" class="headerlink" title="部署你的网站"></a>部署你的网站</h3></the>
+<h3 id="部署你的网站"><a href="#部署你的网站" class="headerlink" title="部署你的网站"></a>部署你的网站</h3><p>回到hexo目录，在命令行中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure></p>
+<p>一阵balabala~~p之后你会看到<br><img src="http://ofufh48at.bkt.clouddn.com/bala.PNG" alt=""><br>好吧，现在打开你的GitHub网址(如：<a href="https://imzys.github.io),怎么样~可以欣赏你的劳动成果了嘛~">https://imzys.github.io),怎么样~可以欣赏你的劳动成果了嘛~</a><br><img src="http://ofufh48at.bkt.clouddn.com/gitpage.PNG" alt=""></p>
+</the>
       
     </div>
     
@@ -338,7 +344,7 @@
         <p><span>本文标题:</span><a href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/">hexo + github 创建你的独立博客（3）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">zys</a></p>
         <p><span>发布时间:</span>2016-11-09, 18:15:18</p>
-        <p><span>最后更新:</span>2016-11-09, 19:31:30</p>
+        <p><span>最后更新:</span>2016-11-09, 19:47:27</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/09/hexo-github-创创建你的独立博客-2-1/" title="hexo + github 创建你的独立博客（3）">http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://imzys.github.io/2016/11/09/hexo-github-创创建你的独立博客-2-1/　　作者: zys" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
